@@ -2,13 +2,15 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import articalContent from "./Artical-content";
 import Articals from "../components/Articals";
+import NotFound from "./NotFound";
+
 
 
 const Artical = () => {
   const { name } = useParams();
   const artical = articalContent.find((artical) => artical.name === name);
 
-  if (!artical) return <h1>Artical doesn't exit. Comming Soon.....</h1>;
+  if (!artical) return <NotFound/>;
   const otherArtical=articalContent.filter(artical=>artical.name!==name)
   return (
     <>
