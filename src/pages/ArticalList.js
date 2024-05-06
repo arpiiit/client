@@ -1,7 +1,5 @@
 import React from "react";
 import articalContent from "./Artical-content";
-import artical from "./Artical-content";
-import { Link } from "react-router-dom";
 import Articals from "../components/Articals";
 
 
